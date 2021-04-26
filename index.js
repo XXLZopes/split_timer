@@ -1,8 +1,7 @@
 
 let timer = document.querySelector('#timer');
-let stopping = true;
-let i;
 
+let stopping = true;
 let stopTimer = document.querySelector('#stopTimer');
 stopTimer.addEventListener('click', () => {
     stopping = true;
@@ -91,4 +90,3 @@ buttonEight.addEventListener('click', () => {
     arrayEight.push(` ${t.textContent}`);
     contentEight.textContent = arrayEight;
 })
-
