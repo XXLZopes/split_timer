@@ -8,23 +8,20 @@ stopTimer.addEventListener('click', () => {
 })
 
 function startTimer() {
-    t = 0;
-    stopping = false;
-
+    let t = 0;
     setInterval ( () => {
         if (!stopping){
         t += .01
         timer.textContent = t;
         } else {
-            clearInterval();
+            t=0;
         }
     }, 10)
-
-}
+} startTimer();
 
 let startButton = document.querySelector('#startTimer')
 startButton.addEventListener('click', () => {
-    startTimer();
+    stopping=false;
 })
 
 let buttonOne = document.querySelector('#one');
