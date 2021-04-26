@@ -1,13 +1,15 @@
 
-let t = document.querySelector('#timer');
+let timer = document.querySelector('#timer');
 let stopping = true;
+let i;
+
 let stopTimer = document.querySelector('#stopTimer');
 stopTimer.addEventListener('click', () => {
     stopping = true;
 })
 
 function startTimer() {
-    let t = 0;
+    t = 0;
     stopping = false;
 
     setInterval ( () => {
@@ -30,7 +32,7 @@ let buttonOne = document.querySelector('#one');
 let contentOne = document.querySelector('#div1')
 let arrayOne = []
 buttonOne.addEventListener('click', () => {
-    arrayOne.push(` ${t.textContent}`);
+    arrayOne.push(` ${t}`);
     contentOne.textContent = arrayOne;
 })
 
@@ -89,3 +91,4 @@ buttonEight.addEventListener('click', () => {
     arrayEight.push(` ${t.textContent}`);
     contentEight.textContent = arrayEight;
 })
+
